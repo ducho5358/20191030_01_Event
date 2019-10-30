@@ -14,6 +14,30 @@ class MainActivity : AppCompatActivity() {
 
         firstTextView.text = "실행 후"
 
+        okBtn.setOnClickListener {
+            firstTextView.text = "확인버튼 클릭됨"
+        }
+
+
+        okBtn.setOnLongClickListener {
+
+            firstTextView.text = "확인버튼 롱클릭"
+
+            return@setOnLongClickListener true
+        }
+
+        // @라벨 에 대한 예시. 책 49p.
+
+        firstFor@ for (i in 0..10) {
+            secondFor@ for (j in 0..10) {
+
+                if (j==2) {
+                    break@firstFor
+                }
+            }
+        }
+
+
 
     }
 }
