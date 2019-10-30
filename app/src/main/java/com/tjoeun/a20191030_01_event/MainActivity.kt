@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             !in intList -> Log.d("when연습", " a가 intList 불포함 이다")
         }
 
-
+//      커밋 추가
         for(name in stringList) {
             Log.d("사람이름", name)
 
