@@ -3,6 +3,7 @@ package com.tjoeun.a20191030_01_event
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,17 @@ class MainActivity : AppCompatActivity() {
 
         okBtn.setOnClickListener {
             firstTextView.text = "확인버튼 클릭됨"
+
+            var inputId = loginIdEdt.text.toString()
+            resultTxt.text = inputId
+
+            Log.d("입력값",inputId)
+
+
+            Toast.makeText(this, inputId, Toast.LENGTH_SHORT).show()
+
+
+
         }
 
 
@@ -65,13 +77,13 @@ class MainActivity : AppCompatActivity() {
         var a = 10
         var b = 20
 
-        var c = if (a=b) {
-            Log.d("로그", "둘이 같다")
+     //   var c = if (a=b) {
+     //       Log.d("로그", "둘이 같다")
 
-        } else {
-            Log.d("로그", "둘이 다르다.")
+     //   } else {
+     //       Log.d("로그", "둘이 다르다.")
 
-        }
+    //    }
 
         when(a) {
             0, 1 -> Log.d("when연습", " a가 0이나 1이다")
@@ -96,4 +108,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-}
+
