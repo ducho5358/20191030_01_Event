@@ -75,10 +75,20 @@ class MainActivity : AppCompatActivity() {
 
         when(a) {
             0, 1 -> Log.d("when연습", " a가 0이나 1이다")
-            in 2..5 -> Log.d("when연습", " a가 0이나 1이다")
-            in intList -> Log.d("when연습", " a가 0이나 1이다")
-            !in intList -> Log.d("when연습", " a가 0이나 1이다")
+            in 2..5 -> Log.d("when연습", " a가 2~5이다")
+            in intList -> Log.d("when연습", " a가 intList에 포함")
+            !in intList -> Log.d("when연습", " a가 intList 불포함 이다")
+        }
 
+
+        for(name in stringList) {
+            Log.d("사람이름", name)
+
+        }
+
+        for (i in 0..5) {
+         Log.d("숫자 찍기", String.format("%d", i))
+        }
 
 
         }
